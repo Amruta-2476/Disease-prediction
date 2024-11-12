@@ -1,0 +1,219 @@
+/* ------------- ------------- NAVBAR start ------------- -------------*/
+body{
+    padding: 0;
+    margin: 0;
+}
+.navbar{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 1rem;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    background: #F2EBDD;
+}
+.nav-logo{
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+.nav-logo img{
+    width: 50px;
+    height: 40px;
+}
+.nav-logo p{
+    font-size: 1.6rem;
+    font-weight: 600;
+}
+.nav-menu{
+    display: flex;
+    align-items: center;
+    list-style: none;
+    gap: 2rem;
+    font-size: 1.2rem;
+    font-weight: 500;
+}
+.nav-menu li{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 0.4rem;
+    cursor: pointer;
+    position: relative;  /* This is important for positioning the hr element */
+}
+.nav-menu li::after {
+    content: "";
+    width: 0;
+    height: 3px;
+    background: #460167;
+    position: absolute;
+    bottom: -6px;  
+    left: 0;
+    transition: width 0.4s ease;
+}
+.nav-menu li:hover::after {
+    width: 100%;
+}
+/* ------------- ------------- NAVBAR end ------------- -------------*/
+
+
+/* ------------- ------------- symptom input block start ------------- -------------*/
+.container {
+    max-width: 800px;
+    margin: 10px auto;
+    padding: 10px;
+    text-align: center;
+  }
+  h1 {
+    color: #00BFFF;
+    margin-bottom: 20px;
+  }
+
+  /* Input Group */
+  .input-group {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  label {
+    font-size: 1.2em;
+    color: #333;
+    margin-bottom: 10px;
+  }
+  input[type="text"] {
+    width: 80%;
+    padding: 12px;
+    font-size: 1em;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    margin: 15px 0 15px 0;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+  .predict-button {
+    background-color: #00BFFF;
+    color: white;
+    border: none;
+    padding: 12px 24px;
+    font-size: 1em;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  .predict-button:hover {
+    background-color: #0099cc;
+  }
+
+  #results {
+    margin-top: 20px;
+    text-align: center;
+  }
+  .card {
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .prediction-header {
+    font-size: 1.5em;
+    color: #00BFFF;
+    margin-bottom: 10px;
+  }
+  .description {
+    font-size: 1em;
+    margin: 10px 0 20px;
+  }
+
+  /* Suggestions Table */
+  .suggestions-table {
+    width: 100%;
+    text-align: left;
+    border-collapse: separate;
+    border-spacing: 0 10px;
+  }
+  .suggestions-table th {
+    text-align: left;
+    padding: 8px;
+    color: #333;
+    font-weight: bold;
+  }
+  .suggestions-table td {
+    padding: 12px;
+    background-color: #f9f9f9;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+  }
+/* ------------- ------------- symptom input block end ------------- -------------*/
+
+
+
+
+
+/* ------------- ------------- footer start ------------- ------------- */
+.footer {
+    display: flex;
+    justify-content: space-between;
+    background-color: #F2EBDD;
+    padding: 20px;
+    margin-top: 2rem;
+  }
+.footer-section {
+    flex: 1;
+    margin: 0 20px;
+  }
+.footer-logo{
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+.footer-logo img{
+    width: 50px;
+    height: 40px;
+}
+.footer-logo p{
+    font-size: 1.6rem;
+    font-weight: 600;
+}
+  .footer h4 {
+    margin-bottom: 10px;
+    color: #333;
+    font-size: 16px;
+  }
+  .footer ul {
+    list-style-type: none;
+    padding: 0;
+  }
+  .footer ul li {
+    margin-bottom: 8px;
+  }
+  .footer ul li a {
+    text-decoration: none;
+    color: #666;
+    font-size: 14px;
+  }
+  .footer ul li a:hover {
+    color: #333;
+  }
+  .contact-info p {
+    margin-bottom: 10px;
+    color: #666;
+    font-size: 14px;
+  }
+  .social-icons a {
+    margin-right: 20px;
+    color: #460167;
+    font-size: 30px;
+  }
+  .social-icons a:hover {
+    color: #000;
+  }
+  .footer p {
+    font-size: 14px;
+    color: #666;
+  }
+  .footer-section:last-child p {
+    margin-top: 10px;
+  }
+/* ------------- ------------- footer end ------------- ------------- */

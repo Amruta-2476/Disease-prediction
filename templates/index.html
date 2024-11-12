@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>HealthBuddy</title>
+  <link rel="stylesheet" href="../static/index.css">
+</head>
+<body>
+
+  <!-- Navbar start -->
+  <div class="navbar">
+    <a href="/" style="text-decoration: none;">
+      <div class="nav-logo">
+        <img src="../static/logo.png" alt="logo">
+        <p>HealthBuddy</p>
+      </div>
+    </a>
+
+    <ul class="nav-menu">
+      <li><a href="index.html" style="text-decoration: none;">Home</a></li>
+      <li><a href="/community" style="text-decoration: none;">Community</a></li>
+      <li><a href="/set-reminders" style="text-decoration: none;">Set Reminders</a></li>
+      <li><a href="/medicine-pred-suggest" style="text-decoration: none;">Predict disease</a></li>
+    </ul>
+  </div>
+  <!-- Navbar end -->
+
+  <!-- symptom input block start -->
+  <div class="container">
+    <h1>Disease Prediction</h1>
+    <div class="input-group">
+      <form action="/predict" method="post">
+        <label for="symptoms">Enter your symptoms (comma-separated):</label>
+        <input type="text" placeholder="e.g., itching, coughing, fever" name="symptoms">
+        <button class="predict-button" onclick="predictDisease()">Predict</button>
+      </form>
+    </div>
+  </div>
+  <!-- symptom input block end -->
+
+  <!-- Results Section -->
+  <div id="results" class="container">
+    <div class="card">
+      <div class="prediction-header">Predicted Disease: {{predicted_disease}}</div>
+      <p class="description">{{dis_des}}</p>
+
+      <table class="suggestions-table">
+        <tr>
+          <th>Precautions to Take:</th>
+          <td>{{my_precautions}}</td>
+        </tr>
+        <tr>
+          <th>Medications (Expert Opinion Mandatory):</th>
+          <td>{{medications}}</td>
+        </tr>
+        <tr>
+          <th>Diet & Workouts:</th>
+          <td>{{rec_diet}}<br>{{workout}}</td>
+        </tr>
+      </table>
+    </div>
+  </div>
+  <!-- Results Section end -->
+
+  <!-- Footer start -->
+  <div class="footer">
+    <div class="footer-section">
+      <h4>Company</h4>
+      <ul>
+        <li><a href="/about">About Us</a></li>
+        <li><a href="/how-it-works">How it Works</a></li>
+        <li><a href="/services">Services</a></li>
+      </ul>
+    </div>
+    <div class="footer-section">
+      <h4>Community</h4>
+      <ul>
+        <li><a href="/community/maternity">Maternity</a></li>
+        <li><a href="/community/senior-citizens">Senior Citizens</a></li>
+      </ul>
+    </div>
+    <div class="footer-section">
+      <h4>Support</h4>
+      <ul>
+        <li><a href="/faq">FAQ</a></li>
+        <li><a href="/help-center">Help Center</a></li>
+      </ul>
+    </div>
+    <div class="footer-section contact-info">
+      <h4>Contact Info</h4>
+      <p>&#x260E; +0913-705-3875</p>
+      <p>&#x2709; xyx@gmail.com</p>
+    </div>
+  </div>
+  <!-- Footer end -->
+
+</body>
+</html>
